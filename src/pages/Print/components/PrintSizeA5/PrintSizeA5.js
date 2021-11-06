@@ -7,7 +7,7 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
           <div className="logo">
             <img src="" alt=""/>
           </div>
-          <h3 className="text-center font-size-lg text-uppercase font-weight-boldest">cser beauty</h3>
+          <h3 className="text-center font-size-lg text-uppercase font-weight-boldest">cser beauty 2</h3>
         </div>
       </div>
     );
