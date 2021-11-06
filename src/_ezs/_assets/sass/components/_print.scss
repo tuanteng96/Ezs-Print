@@ -1,2 +1,101 @@
 @import "../init";
 
+// Size Print
+$print-sizes: ( "xs": 13px, "sm": 14px, "md":16px,"lg":18px,"xl":25px,);
+
+@each $name,
+$value in $print-sizes {
+    .print-size-#{$name} {
+        font-size: $value !important;
+    }
+}
+
+// fontsize
+$font-size-title: 20px;
+$font-size-base-print: 15px !important;
+
+// line-height
+$line-height-title: 23.44px;
+$line-height-receipt: 29.3px;
+$line-height-base-print: 17.58px;
+
+
+// font-weight
+$font-weight-700:700 !important;
+
+.font-weight-700 {
+    font-weight: $font-weight-700;
+}
+
+//Table Colors 
+
+@each $color,
+$value in $theme-colors {
+    .table-bordered-#{$color} {
+        th, td {
+            border: 1px solid $value !important;
+        }
+    }
+}
+
+
+.print-ezs {
+    background: $body-bg;
+    font-size: $font-size-base-print ;
+    line-height: $line-height-base-print;
+    color: $black;
+    font-weight:  $font-weight-normal;
+
+    .print-logo {
+        margin-top: 25px;
+
+    }
+
+    .print-title {
+        font-size: $font-size-title;
+        line-height: $line-height-title;
+    }
+    .print-address {
+        text-transform: capitalize;
+    }
+}
+
+.body-print {
+    padding: 0 16px;
+    .print-infor {
+        // padding: 0 16px 0 24px;
+        .name-user {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 11px;
+            .name-user-item {
+                span {
+
+                }
+            }
+        }
+        .name-hotline {
+            @extend .name-user;
+        }
+        .name-address {
+            @extend .name-user;
+            padding-bottom: 21px;
+        }
+    }
+}
+
+.print-k58 {
+
+    .print-logo {
+        img {
+            width: 191px;
+            height: 81px;
+        }
+        
+    }
+    .print-receipt {
+        font-size: $font-size-title + 5;
+        padding-top: 20px;
+        line-height: $line-height-receipt;
+    }
+}
