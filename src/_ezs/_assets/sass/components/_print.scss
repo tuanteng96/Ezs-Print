@@ -1,15 +1,5 @@
 @import "../init";
 
-// Size Print
-$print-sizes: ( "xs": 13px, "sm": 14px, "md":16px,"lg":18px,"xl":25px,);
-
-@each $name,
-$value in $print-sizes {
-    .print-size-#{$name} {
-        font-size: $value !important;
-    }
-}
-
 // fontsize
 $font-size-title: 20px;
 $font-size-base-print: 15px !important;
@@ -32,19 +22,29 @@ $font-weight-700:700 !important;
 @each $color,
 $value in $theme-colors {
     .table-bordered-#{$color} {
-        th, td {
+
+        th,
+        td {
             border: 1px solid $value !important;
         }
+    }
+}
+$print-sizes: ("xs": 13px, "sm": 14px, "md":16px, "lg":18px, "xl":25px, );
+
+@each $name,
+$value in $print-sizes {
+    .print-size-#{$name} {
+        font-size: $value !important;
     }
 }
 
 
 .print-ezs {
     background: $body-bg;
-    font-size: $font-size-base-print ;
+    font-size: $font-size-base-print;
     line-height: $line-height-base-print;
     color: $black;
-    font-weight:  $font-weight-normal;
+    font-weight: $font-weight-normal;
 
     .print-logo {
         margin-top: 25px;
@@ -52,31 +52,33 @@ $value in $theme-colors {
     }
 
     .print-title {
-        font-size: $font-size-title;
         line-height: $line-height-title;
     }
+
     .print-address {
         text-transform: capitalize;
     }
 }
 
 .body-print {
-    padding: 0 16px;
+
     .print-infor {
+
         // padding: 0 16px 0 24px;
         .name-user {
             display: flex;
             justify-content: space-between;
             padding-bottom: 11px;
-            .name-user-item {
-                span {
 
-                }
+            .name-user-item {
+                span {}
             }
         }
+
         .name-hotline {
             @extend .name-user;
         }
+
         .name-address {
             @extend .name-user;
             padding-bottom: 21px;
@@ -84,18 +86,59 @@ $value in $theme-colors {
     }
 }
 
+.payments {
+    width: 100px !important;
+}
+
+.into-money-discount {
+    text-decoration: line-through;
+}
+
 .print-k58 {
+    font-size: 12px !important;
+    padding: 0 10px;
 
     .print-logo {
         img {
-            width: 191px;
-            height: 81px;
+            width: 128px;
+            height: 53px;
         }
-        
+
     }
+    .body-print {
+        .print-infor {
+            .name-user-item {
+                width: 76px;
+            }
+            .name-hotline-item{
+                 @extend .name-user-item;
+                }
+            .name-address-item{
+                @extend .name-user-item;
+            }
+        }
+    }
+
     .print-receipt {
-        font-size: $font-size-title + 5;
-        padding-top: 20px;
+        font-weight: bold !important;
         line-height: $line-height-receipt;
+    }
+    .print-footer {
+        img {
+            width: 110px;
+            height: auto;
+        }
+        .text-thank {
+            font-size: 12px !important;
+        }
+        .text-see {
+            font-size: 11px !important;
+        }
+    }
+}
+
+@media print {
+    .print-ezs {
+        size: 4in 6in;
     }
 }
