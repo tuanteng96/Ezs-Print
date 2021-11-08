@@ -1,36 +1,29 @@
 @import "../init";
-
 // fontsize
 $font-size-title: 20px;
 $font-size-base-print: 15px !important;
-
 // line-height
 $line-height-title: 23.44px;
 $line-height-receipt: 29.3px;
 $line-height-base-print: 17.58px;
-
-
 // font-weight
 $font-weight-700:700 !important;
-
 .font-weight-700 {
     font-weight: $font-weight-700;
 }
 
 //Table Colors 
-
 @each $color,
 $value in $theme-colors {
     .table-bordered-#{$color} {
-
         th,
         td {
             border: 1px solid $value !important;
         }
     }
 }
-$print-sizes: ("xs": 13px, "sm": 14px, "md":16px, "lg":18px, "xl":25px, );
 
+$print-sizes: ("xs": 13px, "sm": 14px, "md":16px, "lg":18px, "xl":25px, );
 @each $name,
 $value in $print-sizes {
     .print-size-#{$name} {
@@ -38,47 +31,37 @@ $value in $print-sizes {
     }
 }
 
-
 .print-ezs {
     background: $body-bg;
     font-size: $font-size-base-print;
     line-height: $line-height-base-print;
     color: $black;
     font-weight: $font-weight-normal;
-
     .print-logo {
         margin-top: 25px;
-
     }
-
     .print-title {
         line-height: $line-height-title;
     }
-
     .print-address {
         text-transform: capitalize;
     }
 }
 
 .body-print {
-
     .print-infor {
-
         // padding: 0 16px 0 24px;
         .name-user {
             display: flex;
             justify-content: space-between;
             padding-bottom: 11px;
-
             .name-user-item {
                 span {}
             }
         }
-
         .name-hotline {
             @extend .name-user;
         }
-
         .name-address {
             @extend .name-user;
             padding-bottom: 21px;
@@ -97,28 +80,25 @@ $value in $print-sizes {
 .print-k58 {
     font-size: 12px !important;
     padding: 0 10px;
-
     .print-logo {
         img {
             width: 128px;
             height: 53px;
         }
-
     }
     .body-print {
         .print-infor {
             .name-user-item {
                 width: 76px;
             }
-            .name-hotline-item{
-                 @extend .name-user-item;
-                }
-            .name-address-item{
+            .name-hotline-item {
+                @extend .name-user-item;
+            }
+            .name-address-item {
                 @extend .name-user-item;
             }
         }
     }
-
     .print-receipt {
         font-weight: bold !important;
         line-height: $line-height-receipt;
@@ -134,5 +114,16 @@ $value in $print-sizes {
         .text-see {
             font-size: 11px !important;
         }
+    }
+}
+
+@media print {
+    .print-ezs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20mm;
+        padding: 0 15px;
     }
 }
