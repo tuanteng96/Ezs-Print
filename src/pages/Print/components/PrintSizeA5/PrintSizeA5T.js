@@ -6,7 +6,7 @@ const getPageConfig = () => {
   return `@page { size: auto; }`;
 };
 
-export const PrintSizeA5 = React.forwardRef((props, ref) => {
+export const PrintSizeA5T = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="print-ezs print-A5">
       <style>{getPageConfig()}</style>

@@ -111,7 +111,7 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
               </p>
             </div>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item font-weight-800">
+              <p className="total-money-item font-weight-800 text-left">
                 Giá trị cần thanh toán <span className="dotted-item">:</span>
               </p>
               <p className="total-money-item font-weight-800">8.000.000</p>

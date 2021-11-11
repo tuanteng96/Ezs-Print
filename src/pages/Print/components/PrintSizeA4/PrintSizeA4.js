@@ -63,43 +63,27 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="text-left font-weight-800 print-size-md">
-                Kem dưỡng da chống lão hóa, khôi phục tế bào chết
-              </td>
-              <td className="font-weight-800">01</td>
-              <td className="font-weight-bold">
-                <p className="into-money-discount">1.500.000</p>
-                <p className="into-money ">1.200.000</p>
-              </td>
-              <td className="font-weight-bold">
-                <p className="into-money ">1.200.000</p>
-              </td>
-            </tr>
-            <tr className="font-weight-bold">
-              <td className="text-left font-weight-800 print-size-md">
-                Liệu trình tắm trắng phi thuyền 10B
-              </td>
-              <td className="font-weight-800">01</td>
-              <td>
-                <p className="into-money">3.000.000</p>
-              </td>
-              <td>
-                <p className="into-money">3.000.000</p>
-              </td>
-            </tr>
-            <tr className="font-weight-bold">
-              <td className="text-left font-weight-800 print-size-md">
-                Triệt lông toàn thân, nách, bụng, lưng, tay, chân,
-              </td>
-              <td className="font-weight-800">01</td>
-              <td>
-                <p className="into-money">5.000.000</p>
-              </td>
-              <td>
-                <p className="into-money">5.000.000</p>
-              </td>
-            </tr>
+          {Array(3)
+              .fill()
+              .map((item, index) => (
+                <tr key={index}>
+                  <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
+                    Kem dưỡng da chống lão hóa, khôi phục tế bào chết
+                  </td>
+                  <td className="font-weight-800 vertical-align-middle">01</td>
+                  <td className="font-weight-bold vertical-align-middle">
+                    <p className="into-money-discount ">
+                      1.500.000
+                    </p>
+                    <p className="into-money ">
+                      1.200.000
+                    </p>
+                  </td>
+                  <td className="font-weight-bold vertical-align-middle">
+                    <p className="into-money ">1.200.000</p>
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
         <div className="total-payment ">
