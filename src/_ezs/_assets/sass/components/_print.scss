@@ -1,16 +1,13 @@
 @import "../init";
 // fontsize
 $font-size-title: 20px;
-$font-size-base-print: 15px !important;
+$font-size-base-print: 15px !default;
+
 // line-height
 $line-height-title: 23.44px;
 $line-height-receipt: 29.3px;
 $line-height-base-print: 17.58px;
 // font-weight
-$font-weight-700:700 !important;
-.font-weight-700 {
-    font-weight: $font-weight-700;
-}
 
 //Table Colors 
 @each $color,
@@ -19,11 +16,12 @@ $value in $theme-colors {
         th,
         td {
             border: 1px solid $value !important;
+            color: $black !important;
         }
     }
 }
 
-$print-sizes: ("xs": 13px, "sm": 14px, "md":16px, "lg":18px, "xl":25px, );
+$print-sizes: ("10": 10px,"11": 11px,"12": 12px,"xs": 13px, "sm": 14px,"15": 15px, "md":16px, "lg":18px, "xl":25px, );
 @each $name,
 $value in $print-sizes {
     .print-size-#{$name} {
@@ -33,7 +31,6 @@ $value in $print-sizes {
 
 .print-ezs {
     background: $body-bg;
-    font-size: $font-size-base-print;
     line-height: $line-height-base-print;
     color: $black;
     font-weight: $font-weight-normal;
@@ -48,48 +45,21 @@ $value in $print-sizes {
     }
 }
 
-.body-print {
-    .print-infor {
-        // padding: 0 16px 0 24px;
-        .name-user {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 11px;
-            .name-user-item {
-                span {}
-            }
-        }
-        .name-hotline {
-            @extend .name-user;
-        }
-        .name-address {
-            @extend .name-user;
-            padding-bottom: 21px;
-        }
-    }
-}
-
-.payments {
-    width: 100px !important;
-}
-
 .into-money-discount {
     text-decoration: line-through;
 }
 
 .print-k58 {
-    font-size: 12px !important;
-    padding: 0 10px;
+    font-size: $font-size-base-print;
     .print-logo {
         img {
             width: 128px;
-            height: 53px;
         }
     }
     .body-print {
         .print-infor {
             .name-user-item {
-                width: 76px;
+                width: 100px;
             }
             .name-hotline-item {
                 @extend .name-user-item;
@@ -100,30 +70,62 @@ $value in $print-sizes {
         }
     }
     .print-receipt {
-        font-weight: bold !important;
         line-height: $line-height-receipt;
     }
     .print-footer {
-        img {
-            width: 110px;
-            height: auto;
-        }
-        .text-thank {
-            font-size: 12px !important;
-        }
         .text-see {
-            font-size: 11px !important;
+            font-size: $font-size-base-print - 3;
         }
     }
 }
+.print-ezs.print-k80 {
+    font-size: $font-size-base-print + 1 !important;
 
+     .print-logo {
+        margin-top: 0 !important;
+    }
+    .text-see {
+        font-size: $font-size-base-print;
+    }
+ 
+   
+}
+
+.print-ezs.print-A5 {
+    @extend .print-ezs.print-k80;
+    font-size: $font-size-base-print + 3 !important;
+    .header-print{
+        margin-top: 25px;
+    }
+    h4 {
+        font-size:$font-size-base-print + 3 ;
+    }
+}
+.print-ezs.print-A4 {
+    @extend .print-ezs.print-A5;
+}
 @media print {
+    html, body {
+        height: initial !important;
+        overflow: initial !important;
+        -webkit-print-color-adjust: exact;
+      }
     .print-ezs {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        // width: 100%;
+        // height: auto;
         margin-bottom: 20mm;
-        padding: 0 15px;
+        padding: 0 2px;
+        page-break-before: auto;
+        // page-break-after: auto;
+        page-break-inside:auto ;
     }
+    // .print-footer {
+    //    bottom: 15px !important;
+    //     position: fixed;
+    //     left: 38%;
+    // }
+
 }

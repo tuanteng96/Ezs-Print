@@ -77,7 +77,7 @@ $white-light: $white !default; // Custom variable
 $white-inverse: $dark-75 !default; // Custom variable
 // Bootstrap theme colors
 $theme-colors: ( "white": $white, // custom color type
-"primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark) !default;
+"primary": $primary, "secondary": $secondary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark ) !default;
 // Extended hover colors for Bootstrap theme colors
 $theme-hover-colors: ( "white": $white-hover, // custom color type
 "primary": $primary-hover, "secondary": $secondary-hover, "success": $success-hover, "info": $info-hover, "warning": $warning-hover, "danger": $danger-hover, "light": $light-hover, "dark": $dark-hover) !default; // Custom variable

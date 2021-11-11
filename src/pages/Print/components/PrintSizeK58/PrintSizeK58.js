@@ -16,14 +16,14 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
         </div>
-        <div className="print-title text-center text-uppercase font-weight-boldest print-sizes-sm">
+        <div className="print-title text-center text-uppercase font-weight-800 print-sizes-sm">
           cser beauty
         </div>
-        <div className="print-address text-center ">
+        <div className="print-address text-center print-size-sm">
           22/42 Vũ Ngọc Phan - Láng Hạ - Đống Đa - HN
         </div>
-        <div className="print-hottline text-center">Hotline : 0981.883.338</div>
-        <h1 className="print-receipt text-center text-uppercase print-size-md">
+        <div className="print-hottline text-center print-size-sm">Hotline : 0981.883.338</div>
+        <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 py-1">
           Hóa đơn bán hàng
         </h1>
       </div>
@@ -32,142 +32,130 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
           <p>#12021548 - 01/01/2021</p>
         </div>
         <div className="print-infor ">
-          <div className="name-user">
-            <div className="name-user-item text-left">
+          <div className="name-user d-flex justify-content-between">
+            <div className="name-user-item text-left font-weight-bold">
               khách hàng<span className="dotted-item">:</span>
             </div>
-            <div>Phạm Trung Hiếu</div>
+            <div className="font-weight-800">Phạm Trung Hiếu</div>
           </div>
-          <div className="name-hotline">
-            <div className="name-hotline-item text-left">
+          <div className="name-hotline d-flex justify-content-between py-2">
+            <div className="name-hotline-item text-left font-weight-bold">
               Số điện thoại<span className="dotted-item">:</span>
             </div>
-            <div>0978.544.973</div>
+            <div className="font-weight-800">0978.544.973</div>
           </div>
-          <div className="name-address">
-            <div className="name-address-item text-left">
+          <div className="name-address d-flex justify-content-between pb-2">
+            <div className="name-address-item text-left font-weight-bold">
               Địa chỉ<span className="dotted-item">:</span>
             </div>
-            <div>Phường Văn Miếu - Quận Đống Đa</div>
+            <div className="font-weight-800 text-right">Phường Văn Miếu - Quận Đống Đa</div>
           </div>
         </div>
         <table className="table table-bordered table-bordered-dark ">
           <thead>
-            <tr>
-              <th>Tên mặt hàng</th>
-              <th>Số lượng</th>
-              <th>Số lượng</th>
+            <tr >
+              <th className="font-weight-800">Tên mặt hàng</th>
+              <th className="font-weight-800">SL</th>
+              <th className="font-weight-800">Thành tiền</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="text-left">
+              <td className="text-left vertical-align-middle font-weight-800 print-size-sm">
                 Kem dưỡng da chống lão hóa, khôi phục tế bào chết
               </td>
-              <td>01</td>
-              <td>
-                <p className="into-money-discount">1.500.000</p>
-                <p className="into-money">1.200.000</p>
+              <td className="font-weight-800 vertical-align-middle">01</td>
+              <td className="font-weight-bold vertical-align-middle">
+                <p className="into-money-discount vertical-align-middle">1.500.000</p>
+                <p className="into-money vertical-align-middle">1.200.000</p>
               </td>
             </tr>
-            <tr>
-              <td className="text-left">Liệu trình tắm trắng phi thuyền 10B</td>
-              <td>01</td>
+            <tr className="font-weight-bold">
+              <td className="text-left vertical-align-middle font-weight-800 print-size-sm">Liệu trình tắm trắng phi thuyền 10B</td>
+              <td className="font-weight-800 vertical-align-middle">01</td>
               <td>
-                <p className="into-money">3.000.000</p>
+                <p className="into-money vertical-align-middle">3.000.000</p>
               </td>
             </tr>
-            <tr>
-              <td className="text-left">
+            <tr className="font-weight-bold">
+              <td className="text-left vertical-align-middle font-weight-800 print-size-sm">
                 Triệt lông toàn thân, nách, bụng, lưng, tay, chân,
               </td>
-              <td>01</td>
+              <td className="font-weight-800 vertical-align-middle">01</td>
               <td>
-                <p className="into-money">5.000.000</p>
+                <p className="into-money vertical-align-middle">5.000.000</p>
               </td>
             </tr>
           </tbody>
         </table>
         <div className="total-payment ">
           <div className="total-money">
-            <div className="d-flex justify-content-between justify-content-between">
-              <p className="total-money-item">
+            <div className="d-flex justify-content-between">
+              <p className="total-money-item font-weight-bold">
                 Tổng giá trị <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">9.200.000</span> VNĐ
+              <p className="total-money-item font-weight-800" >9.200.000
               </p>
             </div>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item">
-                Giá trị triết khấu <span className="dotted-item">:</span>
+              <p className="total-money-item font-weight-bold">
+                Giá trị chiết khấu <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">1.200.000</span> VNĐ
+              <p className="total-money-item total-money-item font-weight-800">1.200.000
               </p>
             </div>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item">
+              <p className="total-money-item font-weight-800">
                 Giá trị cần thanh toán <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">8.000.000</span> VNĐ
+              <p className="total-money-item font-weight-800">8.000.000
               </p>
             </div>
           </div>
           <div className="pay-money">
-            <h4 className="font-weight-boldest text-left">Thanh toán</h4>
+            <h4 className="text-left font-weight-800">Thanh toán</h4>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item">
-                Chuyển khoản<span className="dotted-item">:</span>
+              <p className="total-money-item font-weight-bold">
+                Chuyển khoản<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">1.000.000</span> VNĐ
+              <p className="total-money-item font-weight-bold">1.000.000
               </p>
             </div>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item">
-                Ví<span className="dotted-item">:</span>
+              <p className="total-money-item font-weight-bold">
+                Ví<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">1.000.000</span> VNĐ
+              <p className="total-money-item font-weight-bold">1.000.000
               </p>
             </div>
             <div className="d-flex justify-content-between">
-              <p className="total-money-item">
-                Nợ đơn hàng<span className="dotted-item">:</span>
+              <p className="total-money-item font-weight-bold">
+                Nợ đơn hàng<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item">
-                <span className="money font-weight-boldest">1.000.000</span> VNĐ
+              <p className="total-money-item font-weight-bold">1.000.000
               </p>
             </div>
           </div>
           <div className="history-total">
-            <h4 className="font-weight-boldest text-left">
+            <h4 className="font-weight-800 text-left">
               Lịch sử thanh toán
             </h4>
-            <div className="d-flex justify-content-between text-left border-bottom">
-              <p className="date">01/01/2021</p>
-              <p className="payments">Tiền mặt</p>
-              <p className="total-payments">
-                <span className="money font-weight-boldest">5.000.000</span>
-                VNĐ
+            <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
+              <p className="date mb-0 py-2 mr-2">01/01/2021</p>
+              <p className="payments mb-0 py-2 w-100px">Tiền mặt</p>
+              <p className="total-payments mb-0 py-2 font-weight-bold">5.000.000
               </p>
             </div>
-            <div className="d-flex justify-content-between text-left border-bottom">
-              <p className="date">05/11/2021</p>
-              <p className="payments">Ví</p>
-              <p className="total-payments ">
-                <span className="money font-weight-boldest">1.000.000</span>
-                VNĐ
+            <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
+              <p className="date mb-0 py-2 mr-2">05/11/2021</p>
+              <p className="payments mb-0 py-2 w-100px">Ví</p>
+              <p className="total-payments mb-0 py-2 font-weight-bold">1.000.000
               </p>
             </div>
-            <div className="d-flex justify-content-between text-left border-bottom">
-              <p className="date">05/11/2021</p>
-              <p className="payments">Chuyển khoản</p>
-              <p className="total-payments">
-                <span className="money font-weight-boldest">1.000.000</span>
-                VNĐ
+            <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
+              <p className="date mb-0 py-2 mr-2">05/11/2021</p>
+              <p className="payments mb-0 py-2 w-100px ">C.khoản</p>
+              <p className="total-payments mb-0 py-2 font-weight-bold">1.000.000
               </p>
             </div>
           </div>
@@ -176,12 +164,12 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
           <img
             src={toAbsoluteUrl("/media/print/barcode.png")}
             alt=""
-            className="pb-6"
+            className="py-6"
           />
-          <div className="text-center print-size-md pb-1 text-thank">
+          <div className="text-center pb-1 text-thank font-weight-bold">
             Cảm ơn quý khách và hẹn gặp lại !
           </div>
-          <div className="text-center print-size-xs text-see">
+          <div className="text-center text-see">
             Thời gian in : 05/11/2021 05:54 PM{" "}
           </div>
         </div>
