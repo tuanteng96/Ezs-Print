@@ -1,17 +1,15 @@
 import React from "react";
 import { toAbsoluteUrl } from "../../../../_ezs/_helpers/AssetsHelpers";
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from "react-helmet";
+
+const getPageConfig = () => {
+  return `@page { size: auto; }`;
+};
 
 export const PrintSizeK58 = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="print-ezs print-k58">
-      <Helmet>
-        <style type="text/css" media="print">{`
-        @page {
-            size: auto;
-          }`}</style>
-      </Helmet>
+      <style>{getPageConfig()}</style>
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
@@ -22,7 +20,9 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
         <div className="print-address text-center print-size-sm">
           22/42 Vũ Ngọc Phan - Láng Hạ - Đống Đa - HN
         </div>
-        <div className="print-hottline text-center print-size-sm">Hotline : 0981.883.338</div>
+        <div className="print-hottline text-center print-size-sm">
+          Hotline : 0981.883.338
+        </div>
         <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 py-1">
           Hóa đơn bán hàng
         </h1>
@@ -48,12 +48,14 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
             <div className="name-address-item text-left font-weight-bold">
               Địa chỉ<span className="dotted-item">:</span>
             </div>
-            <div className="font-weight-800 text-right">Phường Văn Miếu - Quận Đống Đa</div>
+            <div className="font-weight-800 text-right">
+              Phường Văn Miếu - Quận Đống Đa
+            </div>
           </div>
         </div>
         <table className="table table-bordered table-bordered-dark ">
           <thead>
-            <tr >
+            <tr>
               <th className="font-weight-800">Tên mặt hàng</th>
               <th className="font-weight-800">SL</th>
               <th className="font-weight-800">Thành tiền</th>
@@ -66,12 +68,16 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
               </td>
               <td className="font-weight-800 vertical-align-middle">01</td>
               <td className="font-weight-bold vertical-align-middle">
-                <p className="into-money-discount vertical-align-middle">1.500.000</p>
+                <p className="into-money-discount vertical-align-middle">
+                  1.500.000
+                </p>
                 <p className="into-money vertical-align-middle">1.200.000</p>
               </td>
             </tr>
             <tr className="font-weight-bold">
-              <td className="text-left vertical-align-middle font-weight-800 print-size-sm">Liệu trình tắm trắng phi thuyền 10B</td>
+              <td className="text-left vertical-align-middle font-weight-800 print-size-sm">
+                Liệu trình tắm trắng phi thuyền 10B
+              </td>
               <td className="font-weight-800 vertical-align-middle">01</td>
               <td>
                 <p className="into-money vertical-align-middle">3.000.000</p>
@@ -94,22 +100,21 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
               <p className="total-money-item font-weight-bold">
                 Tổng giá trị <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item font-weight-800" >9.200.000
-              </p>
+              <p className="total-money-item font-weight-800">9.200.000</p>
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold">
                 Giá trị chiết khấu <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item total-money-item font-weight-800">1.200.000
+              <p className="total-money-item total-money-item font-weight-800">
+                1.200.000
               </p>
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-800">
                 Giá trị cần thanh toán <span className="dotted-item">:</span>
               </p>
-              <p className="total-money-item font-weight-800">8.000.000
-              </p>
+              <p className="total-money-item font-weight-800">8.000.000</p>
             </div>
           </div>
           <div className="pay-money">
@@ -118,44 +123,42 @@ export const PrintSizeK58 = React.forwardRef((props, ref) => {
               <p className="total-money-item font-weight-bold">
                 Chuyển khoản<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item font-weight-bold">1.000.000
-              </p>
+              <p className="total-money-item font-weight-bold">1.000.000</p>
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold">
                 Ví<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item font-weight-bold">1.000.000
-              </p>
+              <p className="total-money-item font-weight-bold">1.000.000</p>
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold">
                 Nợ đơn hàng<span className="dotted-item ml-1">:</span>
               </p>
-              <p className="total-money-item font-weight-bold">1.000.000
-              </p>
+              <p className="total-money-item font-weight-bold">1.000.000</p>
             </div>
           </div>
           <div className="history-total">
-            <h4 className="font-weight-800 text-left">
-              Lịch sử thanh toán
-            </h4>
+            <h4 className="font-weight-800 text-left">Lịch sử thanh toán</h4>
             <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
               <p className="date mb-0 py-2 mr-2">01/01/2021</p>
               <p className="payments mb-0 py-2 w-100px">Tiền mặt</p>
-              <p className="total-payments mb-0 py-2 font-weight-bold">5.000.000
+              <p className="total-payments mb-0 py-2 font-weight-bold">
+                5.000.000
               </p>
             </div>
             <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
               <p className="date mb-0 py-2 mr-2">05/11/2021</p>
               <p className="payments mb-0 py-2 w-100px">Ví</p>
-              <p className="total-payments mb-0 py-2 font-weight-bold">1.000.000
+              <p className="total-payments mb-0 py-2 font-weight-bold">
+                1.000.000
               </p>
             </div>
             <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
               <p className="date mb-0 py-2 mr-2">05/11/2021</p>
               <p className="payments mb-0 py-2 w-100px ">C.khoản</p>
-              <p className="total-payments mb-0 py-2 font-weight-bold">1.000.000
+              <p className="total-payments mb-0 py-2 font-weight-bold">
+                1.000.000
               </p>
             </div>
           </div>

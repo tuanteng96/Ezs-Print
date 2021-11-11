@@ -1,17 +1,16 @@
 import React from 'react'
 import { toAbsoluteUrl } from '../../../../_ezs/_helpers/AssetsHelpers';
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from "react-helmet";
 
 export const PrintSizeK80 = React.forwardRef((props, ref) =>{
     return (
     <div ref={ref} className="print-ezs print-k80">
-        <Helmet>
+        {/* <Helmet>
             <style type="text/css" media="print">{`
             @page {
                 size: auto;
             }`}</style>
-        </Helmet>
+        </Helmet> */}
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />

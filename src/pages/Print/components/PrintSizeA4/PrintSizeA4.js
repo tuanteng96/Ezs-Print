@@ -1,17 +1,15 @@
 import React from "react";
 import { toAbsoluteUrl } from "../../../../_ezs/_helpers/AssetsHelpers";
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from "react-helmet";
+
+const getPageConfig = () => {
+  return `@page { size: auto; }`;
+};
 
 export const PrintSizeA4 = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="print-ezs print-A4">
-      <Helmet>
-        <style type="text/css" media="print">{`
-            @page {
-                size: auto;
-            }`}</style>
-      </Helmet>
+      <style>{getPageConfig()}</style>
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
@@ -116,7 +114,8 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold w-200px text-left">
-                Giá trị chiết khấu <span className="dotted-item float-right">:</span>
+                Giá trị chiết khấu{" "}
+                <span className="dotted-item float-right">:</span>
               </p>
               <p className="total-money-item total-money-item font-weight-800">
                 1.200.000 <span className="font-weight-normal">VNĐ</span>
@@ -124,7 +123,8 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-800 w-200px text-left">
-                Giá trị cần thanh toán <span className="dotted-item float-right">:</span>
+                Giá trị cần thanh toán{" "}
+                <span className="dotted-item float-right">:</span>
               </p>
               <p className="total-money-item font-weight-800">
                 8.000.000 <span className="font-weight-normal">VNĐ</span>
@@ -132,10 +132,13 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="pay-money">
-            <h4 className="text-left font-weight-800 print-sizes-lg">Thanh toán</h4>
+            <h4 className="text-left font-weight-800 print-sizes-lg">
+              Thanh toán
+            </h4>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold w-200px text-left">
-                Chuyển khoản<span className="dotted-item ml-1 float-right">:</span>
+                Chuyển khoản
+                <span className="dotted-item ml-1 float-right">:</span>
               </p>
               <p className="total-money-item font-weight-bold">
                 1.000.000 <span className="font-weight-normal">VNĐ</span>
@@ -151,7 +154,8 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </div>
             <div className="d-flex justify-content-between">
               <p className="total-money-item font-weight-bold w-200px text-left">
-                Nợ đơn hàng<span className="dotted-item ml-1 float-right">:</span>
+                Nợ đơn hàng
+                <span className="dotted-item ml-1 float-right">:</span>
               </p>
               <p className="total-money-item font-weight-bold">
                 1.000.000 <span className="font-weight-normal">VNĐ</span>
@@ -159,7 +163,9 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </div>
           </div>
           <div className="history-total">
-            <h4 className="font-weight-800 text-left print-sizes-lg">Lịch sử thanh toán</h4>
+            <h4 className="font-weight-800 text-left print-sizes-lg">
+              Lịch sử thanh toán
+            </h4>
             <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
               <p className="date mb-0 py-2 mr-2">01/01/2021</p>
               <p className="payments mb-0 py-2 w-150px">Tiền mặt</p>

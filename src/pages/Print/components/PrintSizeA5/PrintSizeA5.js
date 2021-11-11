@@ -1,18 +1,15 @@
 import React from "react";
 import { toAbsoluteUrl } from "../../../../_ezs/_helpers/AssetsHelpers";
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from "react-helmet";
+
+const getPageConfig = () => {
+  return `@page { size: auto; }`;
+};
 
 export const PrintSizeA5 = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="print-ezs print-A5">
-      <Helmet>
-        <style type="text/css" media="print">{`
-            @page {
-                size: auto;
-
-            }`}</style>
-      </Helmet>
+      <style>{getPageConfig()}</style>
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
@@ -69,14 +66,18 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
             {Array(7)
               .fill()
               .map((item, index) => (
-                <tr key={index} >
+                <tr key={index}>
                   <td className="text-left vertical-align-middle font-weight-800 print-size-md">
                     Kem dưỡng da chống lão hóa, khôi phục tế bào chết
                   </td>
                   <td className="font-weight-800 vertical-align-middle">01</td>
                   <td className="font-weight-bold vertical-align-middle">
-                    <p className="into-money-discount vertical-align-middle">1.500.000</p>
-                    <p className="into-money vertical-align-middle">1.200.000</p>
+                    <p className="into-money-discount vertical-align-middle">
+                      1.500.000
+                    </p>
+                    <p className="into-money vertical-align-middle">
+                      1.200.000
+                    </p>
                   </td>
                   <td className="font-weight-bold vertical-align-middle">
                     <p className="into-money ">1.200.000</p>
