@@ -6,13 +6,11 @@ $font-size-base-print: 15px !default;
 $line-height-title: 23.44px;
 $line-height-receipt: 29.3px;
 $line-height-base-print: 17.58px;
-
 // font-weight
 //Table Colors 
 @each $color,
 $value in $theme-colors {
     .table-bordered-#{$color} {
-
         th,
         td {
             border: 1px solid $value !important;
@@ -22,7 +20,6 @@ $value in $theme-colors {
 }
 
 $print-sizes: ("10": 10px, "11": 11px, "12": 12px, "xs": 13px, "sm": 14px, "15": 15px, "md":16px, "lg":18px, "xl":25px, );
-
 @each $name,
 $value in $print-sizes {
     .print-size-#{$name} {
@@ -35,11 +32,9 @@ $value in $print-sizes {
     line-height: $line-height-base-print;
     color: $black;
     font-weight: $font-weight-normal;
-
     .print-title {
         line-height: $line-height-title;
     }
-
     .print-address {
         text-transform: capitalize;
     }
@@ -51,114 +46,96 @@ $value in $print-sizes {
 
 .print-k58 {
     font-size: $font-size-base-print - 1;
-
     .print-logo {
         img {
             width: 128px;
         }
     }
-
     .body-print {
         .print-infor {
             .name-user-item {
                 width: 100px;
             }
-
             .name-hotline-item {
                 @extend .name-user-item;
             }
-
             .name-address-item {
                 @extend .name-user-item;
             }
         }
     }
-
     .print-receipt {
         line-height: $line-height-receipt;
     }
-
     .print-footer {
         .text-see {
             font-size: $font-size-base-print - 3;
         }
     }
 }
+
 .print-k58T {
     @extend .print-k58;
     font-size: inherit;
 }
 
 .print-k80 {
-    @extend .print-k58 ;
+    @extend .print-k58;
     font-size: $font-size-base-print !important;
-
     .text-see {
         font-size: $font-size-base-print;
     }
 }
 
 .print-A5 {
-
-    font-size: $font-size-base-print  !important;
+    font-size: $font-size-base-print !important;
     h4 {
         font-size: $font-size-base-print + 3;
     }
-
     .print-infor {
         .name-user {
             >div:last-child {
                 width: calc(100% - 200px);
             }
         }
-
         .name-hotline {
             @extend .name-user;
         }
-
         .name-address {
             @extend .name-user;
         }
     }
-
 }
 
 .print-ezs.print-A4 {
-    font-size: $font-size-base-print + 1  !important;
+    font-size: $font-size-base-print + 1 !important;
     padding: 0 10%;
 }
 
 @media print {
-
     html,
     body {
         // height: initial !important;
         overflow: initial !important;
         -webkit-print-color-adjust: exact;
+        display: block;
+        position: relative;
+        height: 100%;
     }
-
     .print-ezs {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: auto;
-        margin-bottom: 20mm;
-        padding: 0 2px;
-        page-break-before: auto;
-        page-break-after: auto;
-        page-break-inside: auto;
-     
-      
     }
-    
+    .print-body {
+        position: relative;
+        z-index: 10;
+        padding-bottom: 200px;
+        background: $white;
+    }
     .print-footer {
         position: fixed;
+        bottom: 0;
         left: 0px;
-        right: 0px;
-        bottom: 15px;
-        page-break-after:always ; 
-       
+        width: 100%;
+        z-index: 9;
     }
 }
-
