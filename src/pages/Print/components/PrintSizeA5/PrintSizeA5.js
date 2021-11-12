@@ -64,7 +64,7 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
               </tr>
             </thead>
             <tbody>
-              {Array(10)
+              {Array(4)
                 .fill()
                 .map((item, index) => (
                   <tr key={index}>

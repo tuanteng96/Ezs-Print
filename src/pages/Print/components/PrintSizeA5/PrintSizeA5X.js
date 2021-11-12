@@ -3,12 +3,12 @@ import { toAbsoluteUrl } from "../../../../_ezs/_helpers/AssetsHelpers";
 import "../../../../_ezs/_assets/sass/components/_print.scss";
 
 const getPageConfig = () => {
-  return `@page { }`;
+  return `@page { size: auto; }`;
 };
 
-export const PrintSizeA4 = React.forwardRef((props, ref) => {
+export const PrintSizeA5T = React.forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="print-ezs print-A4">
+    <div ref={ref} className="print-ezs print-A5">
       <style>{getPageConfig()}</style>
       <div className="header-print">
         <div className="print-logo text-center">
@@ -36,13 +36,13 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             <div className="name-user-item text-left font-weight-bold w-200px">
               Khách hàng <span className="dotted-item float-right">:</span>
             </div>
-            <div className="font-weight-800">Phạm Trung Hiếu</div>
+            <div className="font-weight-800 text-right">Phạm Trung Hiếu</div>
           </div>
           <div className="name-hotline d-flex justify-content-between my-3">
             <div className="name-hotline-item text-left font-weight-bold w-200px">
               Số điện thoại <span className="dotted-item float-right">:</span>
             </div>
-            <div className="font-weight-800">0978.544.973</div>
+            <div className="font-weight-800 text-right">0978.544.973</div>
           </div>
           <div className="name-address d-flex justify-content-between pb-4">
             <div className="name-address-item text-left font-weight-bold w-200px">
@@ -63,7 +63,7 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             </tr>
           </thead>
           <tbody>
-          {Array(4)
+            {Array(7)
               .fill()
               .map((item, index) => (
                 <tr key={index}>
@@ -186,6 +186,7 @@ export const PrintSizeA4 = React.forwardRef((props, ref) => {
             Thời gian in : 05/11/2021 05:54 PM{" "}
           </div>
         </div>
+        
       </div>
     </div>
   );

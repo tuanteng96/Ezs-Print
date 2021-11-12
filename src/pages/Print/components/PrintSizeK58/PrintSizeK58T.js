@@ -1,7 +1,6 @@
 import React from 'react'
 import { toAbsoluteUrl } from '../../../../_ezs/_helpers/AssetsHelpers';
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from 'react-helmet';
 
 export const PrintSizeK58T = React.forwardRef((props,ref) =>{
     return (
