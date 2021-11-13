@@ -59,6 +59,9 @@ export const PrintSizeK58T = React.forwardRef((props,ref) =>{
               9.200.000 <span className="font-weight-normal">VNĐ</span>
               </p>
             </div>
+            <div className="pb-2 ">
+              <p className="font-weight-bold mb-0 text-right">Chín triệu hai trăm nghìn</p>
+            </div>
             <div className="d-flex justify-content-between pb-2">
               <p className="total-money-item font-weight-bold mb-0 w-80px text-left">
               Hình thức<span className="dotted-item float-right"> :</span>
@@ -71,18 +74,6 @@ export const PrintSizeK58T = React.forwardRef((props,ref) =>{
               </p>
               <p className="total-money-item font-weight-bold mb-0 w-left--calc text-right">Thanh toán đơn hàng nợ ngày 15/09</p>
             </div>
-  
-
-            <div className="d-flex justify-content-between pb-2">
-              <p className="total-money-item font-weight-bold mb-0 w-80px text-left ">
-              Bằng chữ <span className="dotted-item float-right">:</span>
-              </p>
-              <p className="total-money-item font-weight-bold mb-0 w-left--calc text-right">Chín triệu hai trăm nghìn</p>
-            </div>
-            
-           
-            
-           
           </div>
         </div>
         <div className="print-signature d-flex justify-content-between font-weight-800 w-100 pt-4">

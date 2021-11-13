@@ -21,7 +21,7 @@ $value in $theme-colors {
     }
 }
 
-$print-sizes: ("10": 10px, "11": 11px, "12": 12px, "xs": 13px, "sm": 14px, "15": 15px, "md":16px, "lg":18px, "xl":25px, );
+$print-sizes: ("10": 10px, "11": 11px, "12": 12px, "xs": 13px, "sm": 14px, "15": 15px, "md":16px, "lg":18px, "xl":26px, );
 
 @each $name,
 $value in $print-sizes {
@@ -29,6 +29,14 @@ $value in $print-sizes {
         font-size: $value !important;
     }
 }
+//borderbottom
+@each $name,
+$value in $theme-colors {
+    .border-bottom-#{$name} {
+        border-bottom:  1px solid $value !important;
+    }
+}
+
 
 .print-ezs {
     background: $body-bg;
@@ -50,7 +58,7 @@ $value in $print-sizes {
 }
 
 .border-bottom {
-    border-bottom: 1px dotted #ccc !important;
+    border-bottom: 1px dotted #000 !important;
 }
 
 // K58-------------------các mẫu k58
@@ -90,6 +98,9 @@ $value in $print-sizes {
             font-size: $font-size-base-print - 3;
         }
     }
+    .print-date {
+        margin-top: -5px;
+    }
 }
 .pr-104r {
     padding-right: 1.4rem !important;
@@ -110,7 +121,9 @@ $value in $print-sizes {
         border-top: 1px solid #000;
     }
 }
- 
+ .print-k58ttkh {
+     @extend .print-k58t;
+ }
 
 // K80-------------------các mẫu k80
 
@@ -124,20 +137,37 @@ $value in $print-sizes {
     }
 }
 .print-k80t {
-    @extend .print-k58t;
+    .print-infor {
+        border-bottom: 1px solid #000;
+    }
+    .w-left--calc {
+        width: calc(100% - 80px);
+    }
+    .print-date {
+        margin-top: -5px;
+    }
+    .print-signature {
+        border-top: 1px solid #000;
+    }
     .print-date {
         margin-top: 0;
     }
 }
-
+.print-k80ttkh {
+    @extend .print-k80t;
+    
+}
 
 // a5-------------------các mẫu a5
 .print-A5 {
+
     padding: 5% 5% 5% 8%!important;
-    font-size: $font-size-base-print  !important;
+    font-size: $font-size-base-print !important;
     h4 {
-        font-size: $font-size-base-print + 3;
+        font-size: $font-size-base-print + 4;
     }
+     
+    
 
     .print-infor {
         .name-user {
@@ -154,18 +184,38 @@ $value in $print-sizes {
             @extend .name-user;
         }
     }
-    .pay-money,
-     .history-total,
-        .print-footer
-      {
-        page-break-inside:avoid;
-    }
 
 }
+.print-A5T {
+    .print-infor {
+        border-bottom: 1px solid #000;
+    }
+    .print-date {
+        margin-top: -5px;
+    }
+    .print-signature {
+        border-top: 1px solid #000;
+    }
+    .print-date {
+        margin-top: 0;
+    }
+}
+
 .print-A4 {
     font-size: $font-size-base-print + 1  !important;
     padding: 5% 10% 5% 12%!important;
 }
+.print-A4T {
+    .print-infor {
+        border-bottom: 1px solid #000;
+    }
+    .w-left--calc {
+        width: calc(100% - 150px);
+    }
+    .print-signature {
+        border-top: 1px solid #000;
+    }
+} 
 
 
 
@@ -185,8 +235,7 @@ $value in $print-sizes {
         left: 0;
         width: 100%;
         height: auto;
-        page-break-before: auto;
-        page-break-after: auto;
+        page-break-after: always !important;
         page-break-inside:avoid;
         &.print-A5 {
             display: flex;
@@ -195,6 +244,45 @@ $value in $print-sizes {
             .print-body {
                 flex-grow: 1;
             }
+        }
+
+
+    }
+
+    .print-A5T,
+    .print-A4T   {
+        .print-footer {
+            position: fixed !important;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+        }
+      
+    }
+
+    .pay-money,
+     .history-total,
+        .print-footer
+      {
+        page-break-after: always;
+        page-break-inside:avoid;
+    }
+
+    table { 
+        page-break-after:auto;
+        thead { 
+            display:table-header-group; 
+        }
+        tr{
+            page-break-inside:avoid; 
+            page-break-after:auto;
+            td{ 
+                page-break-inside:avoid;
+                page-break-after:auto;
+            }
+        }
+        tfoot { 
+            display:table-footer-group; 
         }
     }
 }

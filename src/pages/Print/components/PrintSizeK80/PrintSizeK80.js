@@ -16,18 +16,18 @@ export const PrintSizeK80 = React.forwardRef((props, ref) =>{
           22/42 Vũ Ngọc Phan - Láng Hạ - Đống Đa - HN
         </div>
         <div className="print-hottline text-center print-size-sm ">Hotline : 0981.883.338</div>
-        <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 py-3">
+        <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 pt-4">
           Hóa đơn bán hàng
         </h1>
       </div>
       <div className="body-print text-center">
-        <div className="print-date ">
+        <div className="print-date pb-2">
           <p>#12021548 - 01/01/2021</p>
         </div>
         <div className="print-infor ">
           <div className="name-user d-flex justify-content-between">
             <div className="name-user-item text-left font-weight-bold">
-              khách hàng<span className="dotted-item">:</span>
+              Khách hàng<span className="dotted-item">:</span>
             </div>
             <div className="font-weight-800">Phạm Trung Hiếu</div>
           </div>

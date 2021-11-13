@@ -3,35 +3,39 @@ import ReactToPrint from "react-to-print";
 // import PrinSize k58
 import { PrintSizeK58 } from "./components/PrintSizeK58/PrintSizeK58";
 import { PrintSizeK58T } from "./components/PrintSizeK58/PrintSizeK58T";
-import { PrintSizeK58C } from "./components/PrintSizeK58/PrintSizeK58C";
-import { PrintSizeK58X } from "./components/PrintSizeK58/PrintSizeK58X";
+import { PrintSizeK58TTKH } from "./components/PrintSizeK58/PrintSizeK58TTKH";
 
 // import PrinSize k80
 import { PrintSizeK80 } from "./components/PrintSizeK80/PrintSizeK80";
-import { PrintSizeK80T } from "./components/PrintSizeK80/PrintSizeK80T"
+import { PrintSizeK80T } from "./components/PrintSizeK80/PrintSizeK80T";
+import { PrintSizeK80TTKH } from "./components/PrintSizeK80/PrintSizeK80TTKH";
 
 // import PrinSize A5
 import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
+import { PrintSizeA5T } from "./components/PrintSizeA5/PrintSizeA5T";
 
 // import PrinSize A4
 import { PrintSizeA4 } from "./components/PrintSizeA4/PrintSizeA4";
+import { PrintSizeA4T } from "./components/PrintSizeA4/PrintSizeA4T";
 
 function PrintPage(props) {
   // import PrinSize K58
   const PrintK58Ref = useRef();
   const PrintSizeK58TRef = useRef();
-  const PrintSizeK58CRef = useRef(); 
-  const PrintSizeK58XRef = useRef(); 
+  const PrintSizeK58TTKHRef = useRef();
 
   // import PrinSize K80
   const PrintK80Ref = useRef();
   const PrintK80TRef = useRef();
+  const PrintSizeK80TTKHRef = useRef();
 
   // import PrinSize A5
   const PrintSizeA5Ref = useRef();
+  const PrintSizeA5TRef = useRef();
 
   // import PrinSize A4
   const PrintSizeA4Ref = useRef();
+  const PrintSizeA4TRef = useRef();
 
   const PrintArr = [
     {
@@ -49,18 +53,11 @@ function PrintPage(props) {
       ButtonName: "Print K58 phiếu thu",
     },
     {
-      Name: "Print Size K58 Phiếu chi tiền",
+      Name: "Print Size K58 Thông tin khách hàng",
       ComponentName: "<PrintSizeK58 />",
-      Component: <PrintSizeK58C ref={PrintSizeK58CRef} />,
-      Ref: PrintSizeK58CRef,
-      ButtonName: "Print K58 Phiếu chi tiền",
-    },
-    {
-      Name: "Print Size K58 Phiếu Y/c xuất kho",
-      ComponentName: "<PrintSizeK58 />",
-      Component: <PrintSizeK58X ref={PrintSizeK58XRef} />,
-      Ref: PrintSizeK58XRef,
-      ButtonName: "Print K58 Phiếu chi tiền",
+      Component: <PrintSizeK58TTKH ref={PrintSizeK58TTKHRef} />,
+      Ref: PrintSizeK58TTKHRef,
+      ButtonName: "Print K58 Thông tin khách hàng",
     },
     {
       Name: "Print Size K80",
@@ -76,8 +73,23 @@ function PrintPage(props) {
       Ref: PrintK80TRef,
       ButtonName: "Print K80 Phiếu thu",
     },
+    
+    {
+      Name: "Print Size K80 Thông tin khách hàng",
+      ComponentName: "<PrintSizeK80 />",
+      Component: <PrintSizeK80TTKH ref={PrintSizeK80TTKHRef} />,
+      Ref: PrintSizeK80TTKHRef,
+      ButtonName: "Print K80 Thông tin khách hàng",
+    },
     {
       Name: "Print Size A5",
+      ComponentName: "<PrintSizeA5 />",
+      Component: <PrintSizeA5T ref={PrintSizeA5TRef} />,
+      Ref: PrintSizeA5TRef,
+      ButtonName: "Print A5 Phiếu thu",
+    },
+    {
+      Name: "Print Size A5 Phiếu thu",
       ComponentName: "<PrintSizeA5 />",
       Component: <PrintSizeA5 ref={PrintSizeA5Ref} />,
       Ref: PrintSizeA5Ref,
@@ -89,6 +101,13 @@ function PrintPage(props) {
       Component: <PrintSizeA4 ref={PrintSizeA4Ref} />,
       Ref: PrintSizeA4Ref,
       ButtonName: "Print A4",
+    },
+    {
+      Name: "Print Size A4 Phiếu thu",
+      ComponentName: "<PrintSizeA4 />",
+      Component: <PrintSizeA4T ref={PrintSizeA4TRef} />,
+      Ref: PrintSizeA4TRef,
+      ButtonName: "Print A4 Phiếu thu",
     },
   ];
 

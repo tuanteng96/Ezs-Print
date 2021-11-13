@@ -28,19 +28,19 @@ export const PrintSizeK80T = React.forwardRef((props, ref) =>{
           </div>
           <div className="print-infor pb-4">
             <div className="name-user d-flex justify-content-between">
-              <div className="name-user-item text-left font-weight-bold w-80px">
+              <div className="name-user-item text-left font-weight-bold w-90px">
                 Khách hàng<span className="dotted-item float-right"> :</span>
               </div>
               <div className="font-weight-bold w-left--calc text-right">Phạm Trung Hiếu</div>
             </div>
             <div className="name-hotline d-flex justify-content-between py-2">
-              <div className="name-hotline-item text-left font-weight-bold w-80px">
+              <div className="name-hotline-item text-left font-weight-bold w-90px">
                 Điện thoại<span className="dotted-item float-right"> :</span>
               </div>
               <div className="font-weight-bold w-left--calc text-right">0978.544.973</div>
             </div>
             <div className="name-address d-flex justify-content-between">
-              <div className="name-address-item text-left font-weight-bold w-80px">
+              <div className="name-address-item text-left font-weight-bold w-90px">
                 Địa chỉ<span className="dotted-item float-right"> :</span>
               </div>
               <div className="font-weight-bold text-right w-left--calc text-right">
@@ -52,37 +52,28 @@ export const PrintSizeK80T = React.forwardRef((props, ref) =>{
             <div className="total-money">
               
               <div className="d-flex justify-content-between pb-2">
-                <p className="total-money-item font-weight-bold mb-0 text-left w-80px">
+                <p className="total-money-item font-weight-bold mb-0 text-left w-90px">
                 Số tiền <span className="dotted-item float-right">:</span>
                 </p>
                 <p className="total-money-item total-money-item font-weight-800 mb-0 w-left--calc text-right">
                 9.200.000 <span className="font-weight-normal">VNĐ</span>
                 </p>
               </div>
+              <div className="pb-2 ">
+                <p className="font-weight-bold mb-0 text-right">Chín triệu hai trăm nghìn</p>
+              </div>
               <div className="d-flex justify-content-between pb-2">
-                <p className="total-money-item font-weight-bold mb-0 w-80px text-left">
+                <p className="total-money-item font-weight-bold mb-0 w-90px text-left">
                 Hình thức<span className="dotted-item float-right"> :</span>
                 </p>
                 <p className="total-money-item font-weight-bold mb-0 w-left--calc text-right">Tiền mặt</p>
               </div>
               <div className="d-flex justify-content-between pb-2">
-                <p className="total-money-item font-weight-bold mb-0 w-80px text-left ">
+                <p className="total-money-item font-weight-bold mb-0 w-90px text-left ">
                 Nội dung <span className="dotted-item float-right">:</span>
                 </p>
                 <p className="total-money-item font-weight-bold mb-0 w-left--calc text-right">Thanh toán đơn hàng nợ ngày 15/09</p>
               </div>
-    
-  
-              <div className="d-flex justify-content-between pb-2">
-                <p className="total-money-item font-weight-bold mb-0 w-80px text-left ">
-                Bằng chữ <span className="dotted-item float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-bold mb-0 w-left--calc text-right">Chín triệu hai trăm nghìn</p>
-              </div>
-              
-             
-              
-             
             </div>
           </div>
           <div className="print-signature d-flex justify-content-between font-weight-800 w-100 pt-4">
