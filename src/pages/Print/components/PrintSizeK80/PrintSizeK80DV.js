@@ -17,7 +17,7 @@ export const PrintSizeK80DV = React.forwardRef((props, ref) =>{
         </div>
         <div className="print-hottline text-center print-size-sm ">Hotline : 0981.883.338</div>
         <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 pt-4">
-          Hóa đơn bán hàng
+        PHIẾU LÀM DỊCH VỤ
         </h1>
       </div>
       <div className="body-print text-center">

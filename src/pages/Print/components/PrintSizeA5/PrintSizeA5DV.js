@@ -25,7 +25,7 @@ export const PrintSizeA5DV = React.forwardRef((props, ref) => {
             Hotline : 0981.883.338
           </div>
           <h1 className="print-receipt text-center text-uppercase print-size-xl font-weight-900 mb-0 pt-3">
-            Hóa đơn bán hàng
+          PHIẾU LÀM DỊCH VỤ
           </h1>
         </div>
         <div className="body-print text-center">
@@ -58,143 +58,36 @@ export const PrintSizeA5DV = React.forwardRef((props, ref) => {
             <thead>
               <tr>
                 <th className="font-weight-800">Tên mặt hàng</th>
-                <th className="font-weight-800">Số lượng</th>
-                <th className="font-weight-800">Đơn giá</th>
-                <th className="font-weight-800">Thành tiền</th>
+                <th className="font-weight-800">Buổi thứ</th>
+                <th className="font-weight-800">Tổng buổi</th>
+                <th className="font-weight-800">Kỹ thuật viên</th>
               </tr>
             </thead>
             <tbody>
-              {Array(20)
+              {Array(2)
                 .fill()
                 .map((item, index) => (
                   <tr key={index}>
                     <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
                       Kem dưỡng da chống lão hóa, khôi phục tế bào chết
                     </td>
-                    <td className="font-weight-800 vertical-align-middle">
-                      01
-                    </td>
-                    <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money-discount mb-0">1.500.000</p>
-                      <p className="into-money mb-0">1.200.000</p>
-                    </td>
-                    <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money mb-0">1.200.000</p>
-                    </td>
+                    <td className="font-weight-bold vertical-align-middle">01</td>
+                    <td className="font-weight-bold vertical-align-middle">10</td>
+                    <td className="font-weight-bold vertical-align-middle">Nhân viên A</td>
                   </tr>
                 ))}
-                <tr >
-                    <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
-                      Kem dưỡng da chống lão hóa, khôi phục tế bào chết
-                    </td>
-                    <td className="font-weight-800 vertical-align-middle">
-                      01
-                    </td>
-                    <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money mb-0">9.200.000</p>
-                    </td>
-                    <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money mb-0">9.200.000</p>
-                    </td>
-                  </tr>
             </tbody>
           </table>
-          <div className="total-payment">
-            <div className="total-money">
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-bold w-200px text-left">
-                  Tổng giá trị{" "}
-                  <span className="dotted-item float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-800">
-                  9.200.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-bold w-200px text-left">
-                  Giá trị chiết khấu{" "}
-                  <span className="dotted-item float-right">:</span>
-                </p>
-                <p className="total-money-item total-money-item font-weight-800">
-                  1.200.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-800 w-200px text-left">
-                  Giá trị cần thanh toán{" "}
-                  <span className="dotted-item float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-800">
-                  8.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-            </div>
-            <div className="pay-money">
-              <h4 className="text-left font-weight-800 print-sizes-lg">
-                Thanh toán
-              </h4>
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-bold w-200px text-left">
-                  Chuyển khoản
-                  <span className="dotted-item ml-1 float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-bold">
-                  1.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-bold w-200px text-left">
-                  Ví<span className="dotted-item ml-1 float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-bold">
-                  1.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <p className="total-money-item font-weight-bold w-200px text-left">
-                  Nợ đơn hàng
-                  <span className="dotted-item ml-1 float-right">:</span>
-                </p>
-                <p className="total-money-item font-weight-bold">
-                  1.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-            </div>
-            <div className="history-total">
-              <h4 className="font-weight-800 text-left print-sizes-lg">
-                Lịch sử thanh toán
-              </h4>
-              <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
-                <p className="date mb-0 py-2 mr-2">01/01/2021</p>
-                <p className="payments mb-0 py-2 w-150px">Tiền mặt</p>
-                <p className="total-payments mb-0 py-2 font-weight-bold">
-                  5.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
-                <p className="date mb-0 py-2 mr-2">05/11/2021</p>
-                <p className="payments mb-0 py-2 w-150px">Ví</p>
-                <p className="total-payments mb-0 py-2 font-weight-bold">
-                  1.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-              <div className="d-flex justify-content-between text-left border-bottom font-weight-bold">
-                <p className="date mb-0 py-2 mr-2">05/11/2021</p>
-                <p className="payments mb-0 py-2 w-150px ">Chuyển khoản</p>
-                <p className="total-payments mb-0 py-2 font-weight-bold">
-                  1.000.000 <span className="font-weight-normal">VNĐ</span>
-                </p>
-              </div>
-            </div>
+          <div className="text-left">
+              <p className=""><span className="font-weight-800">Ghi chú :</span> Khách dị ứng với tinh dầu nghệ, khách đã mang theo thuốc triệt lông</p>
+          </div>
+          <div className="print-signature d-flex justify-content-between font-weight-800 w-100 pt-4">
+            <div className="h-300px pl-12">Khách hàng</div>
+            <div className="h-300px pr-12">Kỹ thuật viên</div>
           </div>
         </div>
       </div>
       <div className="print-footer py-4 d-flex flex-column align-items-center">
-        <img
-          src={toAbsoluteUrl("/media/print/barcode.png")}
-          alt=""
-          className="py-6"
-        />
         <div className="text-center pb-1 text-thank font-weight-bold">
           Cảm ơn quý khách và hẹn gặp lại !
         </div>

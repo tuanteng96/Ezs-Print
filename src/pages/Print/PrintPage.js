@@ -16,12 +16,15 @@ import { PrintSizeK80DV } from "./components/PrintSizeK80/PrintSizeK80DV";
 import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
 import { PrintSizeA5T } from "./components/PrintSizeA5/PrintSizeA5T";
 import { PrintSizeA5TTKH } from "./components/PrintSizeA5/PrintSizeA5TTKH";
+import { PrintSizeA5DV } from "./components/PrintSizeA5/PrintSizeA5DV";
 
 
 // import PrinSize A4
 import { PrintSizeA4 } from "./components/PrintSizeA4/PrintSizeA4";
 import { PrintSizeA4T } from "./components/PrintSizeA4/PrintSizeA4T";
 import { PrintSizeA4TTKH } from "./components/PrintSizeA4/PrintSizeA4TTKH";
+import { PrintSizeA4DV } from "./components/PrintSizeA4/PrintSizeA4DV";
+
 function PrintPage(props) {
   // import PrinSize K58
   const PrintK58Ref = useRef();
@@ -39,11 +42,13 @@ function PrintPage(props) {
   const PrintSizeA5Ref = useRef();
   const PrintSizeA5TRef = useRef();
   const PrintSizeA5TTKHRef = useRef();
+  const PrintSizeA5DVRef = useRef();
 
   // import PrinSize A4
   const PrintSizeA4Ref = useRef();
   const PrintSizeA4TRef = useRef();
   const PrintSizeA4TTKHRef = useRef ();
+  const PrintSizeA4DVRef = useRef();
 
   const PrintArr = [
     {
@@ -125,6 +130,13 @@ function PrintPage(props) {
       ButtonName: "Print A5 Thông tin khách hàng",
     },
     {
+      Name: "Print Size A5 Phiếu làm dịch vụ",
+      ComponentName: "<PrintSizeA5 />",
+      Component: <PrintSizeA5DV ref={PrintSizeA5DVRef} />,
+      Ref: PrintSizeA5DVRef,
+      ButtonName: "Print A5 Phiếu làm dịch vụ",
+    },
+    {
       Name: "Print Size A4",
       ComponentName: "<PrintSizeA4 />",
       Component: <PrintSizeA4 ref={PrintSizeA4Ref} />,
@@ -144,6 +156,13 @@ function PrintPage(props) {
       Component: <PrintSizeA4TTKH ref={PrintSizeA4TTKHRef} />,
       Ref: PrintSizeA4TTKHRef,
       ButtonName: "Print A4 Thông tin khách hàng",
+    },
+    {
+      Name: "Print Size A4 Phiếu làm dịch vụ",
+      ComponentName: "<PrintSizeA4 />",
+      Component: <PrintSizeA4DV ref={PrintSizeA4DVRef} />,
+      Ref: PrintSizeA4DVRef,
+      ButtonName: "Print A4 Phiếu làm dịch vụ",
     },
   ];
 

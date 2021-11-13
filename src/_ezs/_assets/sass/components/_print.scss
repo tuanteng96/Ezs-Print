@@ -270,6 +270,15 @@ $value in $theme-colors {
         }
       
     }
+    .print-A4dv {
+        .print-footer {
+            position: fixed !important;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+        }
+    }
+
 
     .pay-money,
      .history-total,
