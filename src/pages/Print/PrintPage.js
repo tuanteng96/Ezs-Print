@@ -4,11 +4,13 @@ import ReactToPrint from "react-to-print";
 import { PrintSizeK58 } from "./components/PrintSizeK58/PrintSizeK58";
 import { PrintSizeK58T } from "./components/PrintSizeK58/PrintSizeK58T";
 import { PrintSizeK58TTKH } from "./components/PrintSizeK58/PrintSizeK58TTKH";
+import { PrintSizeK58DV } from "./components/PrintSizeK58/PrintSizeK58DV";
 
 // import PrinSize k80
 import { PrintSizeK80 } from "./components/PrintSizeK80/PrintSizeK80";
 import { PrintSizeK80T } from "./components/PrintSizeK80/PrintSizeK80T";
 import { PrintSizeK80TTKH } from "./components/PrintSizeK80/PrintSizeK80TTKH";
+import { PrintSizeK80DV } from "./components/PrintSizeK80/PrintSizeK80DV";
 
 // import PrinSize A5
 import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
@@ -25,11 +27,13 @@ function PrintPage(props) {
   const PrintK58Ref = useRef();
   const PrintSizeK58TRef = useRef();
   const PrintSizeK58TTKHRef = useRef();
+  const PrintSizeK58DVRef = useRef();
 
   // import PrinSize K80
   const PrintK80Ref = useRef();
   const PrintK80TRef = useRef();
   const PrintSizeK80TTKHRef = useRef();
+  const PrintSizeK80DVRef = useRef();
 
   // import PrinSize A5
   const PrintSizeA5Ref = useRef();
@@ -64,6 +68,13 @@ function PrintPage(props) {
       ButtonName: "Print K58 Thông tin khách hàng",
     },
     {
+      Name: "Print Size K58 Phiếu làm dịch vụ",
+      ComponentName: "<PrintSizeK58 />",
+      Component: <PrintSizeK58DV ref={PrintSizeK58DVRef} />,
+      Ref: PrintSizeK58DVRef,
+      ButtonName: "Print K58 Phiếu làm dịch vụ",
+    },
+    {
       Name: "Print Size K80",
       ComponentName: "<PrintSizeK80 />",
       Component: <PrintSizeK80 ref={PrintK80Ref} />,
@@ -84,6 +95,13 @@ function PrintPage(props) {
       Component: <PrintSizeK80TTKH ref={PrintSizeK80TTKHRef} />,
       Ref: PrintSizeK80TTKHRef,
       ButtonName: "Print K80 Thông tin khách hàng",
+    },
+    {
+      Name: "Print Size K80 Phiếu làm dịch vụ",
+      ComponentName: "<PrintSizeK80 />",
+      Component: <PrintSizeK80DV ref={PrintSizeK80DVRef} />,
+      Ref: PrintSizeK80DVRef,
+      ButtonName: "Print K80 Phiếu làm dịch vụ",
     },
     {
       Name: "Print Size A5",

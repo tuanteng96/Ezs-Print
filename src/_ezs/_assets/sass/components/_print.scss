@@ -51,7 +51,7 @@ $value in $theme-colors {
     .print-address {
         text-transform: capitalize;
     }
-    
+
 }
 
 .into-money-discount {
@@ -124,6 +124,11 @@ $value in $theme-colors {
 }
  .print-k58ttkh {
      @extend .print-k58t;
+ }
+ .print-k58dv {
+    .w-left--calc {
+        width: calc(100% - 100px);
+    }
  }
 
 // K80-------------------các mẫu k80
@@ -220,7 +225,9 @@ $value in $theme-colors {
         border-top: 1px solid #000;
     }
 } 
-
+.print-A4TTKH {
+    @extend .print-A4T;
+}
 
 
 
