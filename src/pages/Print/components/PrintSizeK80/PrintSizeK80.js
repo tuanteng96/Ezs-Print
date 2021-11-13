@@ -4,7 +4,7 @@ import "../../../../_ezs/_assets/sass/components/_print.scss";
 
 export const PrintSizeK80 = React.forwardRef((props, ref) =>{
     return (
-    <div ref={ref} className="print-ezs print-k80">
+    <div ref={ref} className="print-ezs print-k80 pr-104r">
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
@@ -62,16 +62,16 @@ export const PrintSizeK80 = React.forwardRef((props, ref) =>{
             </td>
             <td className="font-weight-800 vertical-align-middle">01</td>
             <td className="font-weight-bold vertical-align-middle">
-              <p className="into-money-discount vertical-align-middle">
+              <p className="into-money-discount vertical-align-middle mb-0" >
                 1.500.000
               </p>
-              <p className="into-money vertical-align-middle">1.200.000</p>
+              <p className="into-money vertical-align-middle mb-0">1.200.000</p>
             </td>
             <td className="font-weight-bold vertical-align-middle">
-              <p className="into-money-discount vertical-align-middle">
+              <p className="into-money-discount vertical-align-middle mb-0">
                 1.500.000
               </p>
-              <p className="into-money vertical-align-middle">1.200.000</p>
+              <p className="into-money vertical-align-middle mb-0">1.200.000</p>
             </td>
           </tr>
           <tr className="font-weight-bold">
@@ -79,11 +79,11 @@ export const PrintSizeK80 = React.forwardRef((props, ref) =>{
               Liệu trình tắm trắng phi thuyền 10B
             </td>
             <td className="font-weight-800 vertical-align-middle">01</td>
-            <td>
-              <p className="into-money vertical-align-middle">3.000.000</p>
+            <td className="vertical-align-middle">
+              <p className="into-money mb-0">3.000.000</p>
             </td>
-            <td>
-              <p className="into-money vertical-align-middle">3.000.000</p>
+            <td className="vertical-align-middle">
+              <p className="into-money mb-0">3.000.000</p>
             </td>
           </tr>
           <tr className="font-weight-bold">
@@ -91,11 +91,11 @@ export const PrintSizeK80 = React.forwardRef((props, ref) =>{
               Triệt lông toàn thân, nách, bụng, lưng, tay, chân,
             </td>
             <td className="font-weight-800 vertical-align-middle">01</td>
-            <td>
-              <p className="into-money vertical-align-middle">5.000.000</p>
+            <td className="vertical-align-middle">
+              <p className="into-money mb-0">5.000.000</p>
             </td>
-            <td>
-              <p className="into-money vertical-align-middle">5.000.000</p>
+            <td className="vertical-align-middle">
+              <p className="into-money mb-0">5.000.000</p>
             </td>
           </tr>
           

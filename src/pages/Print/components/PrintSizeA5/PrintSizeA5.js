@@ -3,7 +3,7 @@ import { toAbsoluteUrl } from "../../../../_ezs/_helpers/AssetsHelpers";
 import "../../../../_ezs/_assets/sass/components/_print.scss";
 
 const getPageConfig = () => {
-  return `@page { }`;
+  return `@page {  }`;
 };
 
 export const PrintSizeA5 = React.forwardRef((props, ref) => {
@@ -64,7 +64,7 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
               </tr>
             </thead>
             <tbody>
-              {Array(4)
+              {Array(20)
                 .fill()
                 .map((item, index) => (
                   <tr key={index}>
@@ -75,14 +75,28 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
                       01
                     </td>
                     <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money-discount ">1.500.000</p>
-                      <p className="into-money ">1.200.000</p>
+                      <p className="into-money-discount mb-0">1.500.000</p>
+                      <p className="into-money mb-0">1.200.000</p>
                     </td>
                     <td className="font-weight-bold vertical-align-middle">
-                      <p className="into-money ">1.200.000</p>
+                      <p className="into-money mb-0">1.200.000</p>
                     </td>
                   </tr>
                 ))}
+                <tr >
+                    <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
+                      Kem dưỡng da chống lão hóa, khôi phục tế bào chết
+                    </td>
+                    <td className="font-weight-800 vertical-align-middle">
+                      01
+                    </td>
+                    <td className="font-weight-bold vertical-align-middle">
+                      <p className="into-money mb-0">9.200.000</p>
+                    </td>
+                    <td className="font-weight-bold vertical-align-middle">
+                      <p className="into-money mb-0">9.200.000</p>
+                    </td>
+                  </tr>
             </tbody>
           </table>
           <div className="total-payment">
@@ -175,7 +189,7 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-      <div className="print-footer py-5 d-flex flex-column align-items-center">
+      <div className="print-footer py-4 d-flex flex-column align-items-center">
         <img
           src={toAbsoluteUrl("/media/print/barcode.png")}
           alt=""

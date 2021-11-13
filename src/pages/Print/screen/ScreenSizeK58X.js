@@ -1,8 +1,8 @@
 import React from 'react'
-import { PrintSizeK58 } from '../components/PrintSizeK58/PrintSizeK58'
+import { PrintSizeK58X } from '../components/PrintSizeK58/PrintSizeK58X'
 
-export default function ScreenSizeK58() {
+export default function ScreenSizeK58X() {
     return (
-        <PrintSizeK58 />
+        <PrintSizeK58X />
     )
 }

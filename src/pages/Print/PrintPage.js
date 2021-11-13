@@ -1,18 +1,36 @@
 import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
-import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
+// import PrinSize k58
 import { PrintSizeK58 } from "./components/PrintSizeK58/PrintSizeK58";
 import { PrintSizeK58T } from "./components/PrintSizeK58/PrintSizeK58T";
+import { PrintSizeK58C } from "./components/PrintSizeK58/PrintSizeK58C";
+import { PrintSizeK58X } from "./components/PrintSizeK58/PrintSizeK58X";
+
+// import PrinSize k80
 import { PrintSizeK80 } from "./components/PrintSizeK80/PrintSizeK80";
 import { PrintSizeK80T } from "./components/PrintSizeK80/PrintSizeK80T"
+
+// import PrinSize A5
+import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
+
+// import PrinSize A4
 import { PrintSizeA4 } from "./components/PrintSizeA4/PrintSizeA4";
 
 function PrintPage(props) {
+  // import PrinSize K58
   const PrintK58Ref = useRef();
   const PrintSizeK58TRef = useRef();
+  const PrintSizeK58CRef = useRef(); 
+  const PrintSizeK58XRef = useRef(); 
+
+  // import PrinSize K80
   const PrintK80Ref = useRef();
   const PrintK80TRef = useRef();
+
+  // import PrinSize A5
   const PrintSizeA5Ref = useRef();
+
+  // import PrinSize A4
   const PrintSizeA4Ref = useRef();
 
   const PrintArr = [
@@ -29,6 +47,20 @@ function PrintPage(props) {
       Component: <PrintSizeK58T ref={PrintSizeK58TRef} />,
       Ref: PrintSizeK58TRef,
       ButtonName: "Print K58 phiếu thu",
+    },
+    {
+      Name: "Print Size K58 Phiếu chi tiền",
+      ComponentName: "<PrintSizeK58 />",
+      Component: <PrintSizeK58C ref={PrintSizeK58CRef} />,
+      Ref: PrintSizeK58CRef,
+      ButtonName: "Print K58 Phiếu chi tiền",
+    },
+    {
+      Name: "Print Size K58 Phiếu Y/c xuất kho",
+      ComponentName: "<PrintSizeK58 />",
+      Component: <PrintSizeK58X ref={PrintSizeK58XRef} />,
+      Ref: PrintSizeK58XRef,
+      ButtonName: "Print K58 Phiếu chi tiền",
     },
     {
       Name: "Print Size K80",

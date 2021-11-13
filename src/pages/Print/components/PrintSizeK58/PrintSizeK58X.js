@@ -1,11 +1,10 @@
 import React from 'react'
 import { toAbsoluteUrl } from '../../../../_ezs/_helpers/AssetsHelpers';
 import "../../../../_ezs/_assets/sass/components/_print.scss";
-import { Helmet } from 'react-helmet';
 
-export const PrintSizeK58T = React.forwardRef((props,ref) =>{
+export const PrintSizeK58X = React.forwardRef((props,ref) =>{
     return (
-      <div ref={ref} className="print-ezs print-k58T">
+      <div ref={ref} className="print-ezs print-k58 pr-104r ">
       <div className="header-print">
         <div className="print-logo text-center">
           <img src={toAbsoluteUrl("/media/print/logoCSER.png")} alt="" />
@@ -20,7 +19,7 @@ export const PrintSizeK58T = React.forwardRef((props,ref) =>{
           Hotline : 0981.883.338
         </div>
         <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 py-1">
-          Hóa đơn bán hàng
+          PHIẾU YÊU CẦU XUẤT KHO
         </h1>
       </div>
       <div className="body-print text-center">
@@ -28,66 +27,66 @@ export const PrintSizeK58T = React.forwardRef((props,ref) =>{
           <p>#12021548 - 01/01/2021</p>
         </div>
         <div className="print-infor ">
-          <div className="name-user d-flex justify-content-between">
-            <div className="name-user-item text-left font-weight-bold">
-              khách hàng<span className="dotted-item">:</span>
+          <div className="name-sento d-flex justify-content-between">
+            <div className="name-user-item text-left font-weight-800">
+               Kính gửi<span className="dotted-item">:</span>
             </div>
-            <div className="font-weight-bold">Phạm Trung Hiếu</div>
+            <div className="font-weight-bold">Bộ phận kế toán</div>
           </div>
-          <div className="name-hotline d-flex justify-content-between py-2">
+          <div className="name-user d-flex justify-content-between py-2">
             <div className="name-hotline-item text-left font-weight-bold">
-              Số điện thoại<span className="dotted-item">:</span>
+            Họ tên<span className="dotted-item">:</span>
             </div>
-            <div className="font-weight-bold">0978.544.973</div>
+            <div className="font-weight-bold">Nhân viên A</div>
           </div>
           <div className="name-address d-flex justify-content-between pb-2">
             <div className="name-address-item text-left font-weight-bold">
-              Địa chỉ<span className="dotted-item">:</span>
+            Cơ sở<span className="dotted-item">:</span>
             </div>
             <div className="font-weight-bold text-right">
-              Phường Văn Miếu - Quận Đống Đa
+            CSER HÀ NỘI
+            </div>
+          </div>
+          <div className="name-address d-flex justify-content-between pb-2">
+            <div className="name-address-item text-left font-weight-bold">
+            Lý do cần nhập<span className="dotted-item">:</span>
+            </div>
+            <div className="font-weight-bold text-right">
+            Nhập để bán hàng cho khách
             </div>
           </div>
         </div>
-        <div className="total-payment ">
-          <div className="total-money">
-            <div className="d-flex justify-content-between">
-              <p className="total-money-item font-weight-bold">
-              Lý do thu <span className="dotted-item">:</span>
-              </p>
-              <p className="total-money-item font-weight-bold ">Ghi chú từ khoản thu chi</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <p className="total-money-item font-weight-bold">
-              Tổng số tiền <span className="dotted-item">:</span>
-              </p>
-              <p className="total-money-item total-money-item font-weight-800">
-              9.200.000 <span className="font-weight-normal">VNĐ</span>
-              </p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <p className="total-money-item font-weight-bold ">
-              Bằng chữ <span className="dotted-item">:</span>
-              </p>
-              <p className="total-money-item font-weight-bold">Chín triệu hai trăm nghìn</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <p className="total-money-item font-weight-bold ">
-              Hình thức thanh toán<span className="dotted-item">:</span>
-              </p>
-              <p className="total-money-item font-weight-bold">Tiền mặt</p>
-            </div>
+        <table className="table table-bordered table-bordered-dark ">
+            <thead>
+              <tr>
+                <th className="font-weight-800">Tên mặt hàng</th>
+                <th className="font-weight-800">Đơn vị</th>
+                <th className="font-weight-800">Số lượng Y/C</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Array(4)
+                .fill()
+                .map((item, index) => (
+                  <tr key={index}>
+                    <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
+                    Kem dưỡng da chống lão hóa, khôi phục tế bào chết
+                    </td>
+                    <td className="font-weight-800 vertical-align-middle">
+                      Hộp
+                    </td>
+                    <td className="font-weight-800 vertical-align-middle">
+                      10
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+          <div className="print-signature d-flex justify-content-between font-weight-800">
+            <div className="h-70px">người lập phiếu</div>
+            <div className="h-70px">Thủ kho</div>
           </div>
-        </div>
         <div className="print-footer pb-5 ">
-          <img
-            src={toAbsoluteUrl("/media/print/barcode.png")}
-            alt=""
-            className="py-6"
-          />
-          <div className="text-center pb-1 text-thank font-weight-bold">
-            Cảm ơn quý khách và hẹn gặp lại !
-          </div>
           <div className="text-center text-see">
             Thời gian in : 05/11/2021 05:54 PM{" "}
           </div>
