@@ -19,7 +19,7 @@ export const PrintSizeK80TTKH = React.forwardRef((props, ref) =>{
             Hotline : 0981.883.338
           </div>
           <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 pt-5">
-            phiếu thu tiền
+          THÔNG TIN KHÁCH HÀNG
           </h1>
         </div>
         <div className="body-print text-center">
@@ -47,8 +47,8 @@ export const PrintSizeK80TTKH = React.forwardRef((props, ref) =>{
                 trunghieu@ezs.vn
               </div>
             </div>
-            <div className="name-date d-flex justify-content-between">
-              <div className="name-email-item text-left font-weight-bold w-90px">
+            <div className="name-birthday d-flex justify-content-between">
+              <div className="name-birthday-item text-left font-weight-bold w-90px">
                 Ngày sinh<span className="dotted-item float-right"> :</span>
               </div>
               <div className="font-weight-bold text-right w-left--calc text-right">
@@ -71,18 +71,18 @@ export const PrintSizeK80TTKH = React.forwardRef((props, ref) =>{
             </div>
           </div>
           <div className="print-footer pb-5 ">
-          <img
-            src={toAbsoluteUrl("/media/print/QR.png")}
-            alt=""
-            className="py-6"/>
-          <p className="pb-1 font-weight-bold text-left"><span className="font-weight-800">Lưu ý :</span> Cài đặt ứng dụng EZSpa để quản lý tài khoản.</p>
-          <div className="text-center pb-1 text-thank font-weight-bold">
-            Cảm ơn quý khách và hẹn gặp lại !
+            <img
+              src={toAbsoluteUrl("/media/print/QR.png")}
+              alt=""
+              className="py-6"/>
+            <p className="pb-1 font-weight-bold text-left"><span className="font-weight-800">Lưu ý :</span> Cài đặt ứng dụng EZSpa để quản lý tài khoản.</p>
+            <div className="text-center pb-1 text-thank font-weight-bold">
+              Cảm ơn quý khách và hẹn gặp lại !
+            </div>
+            <div className="text-center text-see">
+              Thời gian in : 05/11/2021 05:54 PM{" "}
+            </div>
           </div>
-          <div className="text-center text-see">
-            Thời gian in : 05/11/2021 05:54 PM{" "}
-          </div>
-        </div>
         </div>
       </div>
     

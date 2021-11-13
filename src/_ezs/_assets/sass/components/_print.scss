@@ -51,6 +51,7 @@ $value in $theme-colors {
     .print-address {
         text-transform: capitalize;
     }
+    
 }
 
 .into-money-discount {
@@ -199,6 +200,9 @@ $value in $theme-colors {
     .print-date {
         margin-top: 0;
     }
+}
+.print-A5Ttkh {
+    @extend .print-A5T;
 }
 
 .print-A4 {

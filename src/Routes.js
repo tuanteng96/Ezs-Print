@@ -12,9 +12,11 @@ import ScreenPrintSizeK80TTKH from './pages/Print/screen/ScreenPrintSizeK80TTKH'
 
 import ScreenPrintSizeA5 from './pages/Print/screen/ScreenPrintSizeA5';
 import ScreenPrintSizeA5T from './pages/Print/screen/ScreenPrintSizeA5T';
+import ScreenPrintSizeA5TTKH from './pages/Print/screen/ScreenPrintSizeA5TTKH';
 
 import ScreenPrintSizeA4 from './pages/Print/screen/ScreenPrintSizeA4';
 import ScreenPrintSizeA4T from './pages/Print/screen/ScreenPrintSizeA4T';
+import ScreenPrintSizeA4TTKH from './pages/Print/screen/ScreenPrintSizeA4TTKH';
 
 
 function Routes(props) {
@@ -32,10 +34,12 @@ function Routes(props) {
 
         <Route path={'/print/A5'} component={ScreenPrintSizeA5}/>
         <Route path={'/print/A5T'} component={ScreenPrintSizeA5T}/>
+        <Route path={'/Print/A5TTKH'} component ={ScreenPrintSizeA5TTKH}/>
 
 
         <Route path={'/print/A4'} component={ScreenPrintSizeA4}/>
         <Route path={'/print/A4T'} component={ScreenPrintSizeA4T}/>
+        <Route path={'/print/A4TTKH'} component={ScreenPrintSizeA4TTKH}/>
         <Route path={`/print`} component={PrintPage} />
       </Switch>
     );

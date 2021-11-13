@@ -24,7 +24,7 @@ export const PrintSizeA5 = React.forwardRef((props, ref) => {
           <div className="print-hottline text-center print-size-sm">
             Hotline : 0981.883.338
           </div>
-          <h1 className="print-receipt text-center text-uppercase print-size-xl font-weight-900 mb-0 py-3">
+          <h1 className="print-receipt text-center text-uppercase print-size-xl font-weight-900 mb-0 pt-3">
             Hóa đơn bán hàng
           </h1>
         </div>
