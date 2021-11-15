@@ -130,7 +130,22 @@ $value in $theme-colors {
         width: calc(100% - 100px);
     }
  }
+.print-k58x {
+    .w-left--calc {
+        width: calc(100% - 100px);
+    }
+}
+.print-k58x {
+    .table {
+        .w-quantity {
+            padding: 0.25rem !important;
+        }
+    }
+}
 
+.table th.w-quantity {
+    padding: 1rem !important;
+}
 // K80-------------------các mẫu k80
 
 .print-k80 {
@@ -206,10 +221,27 @@ $value in $theme-colors {
         margin-top: 0;
     }
 }
+
+.print-A4x {
+    .table th.w-quantity {
+        width: 100px !important;
+    }
+}
 .print-A5Ttkh {
     @extend .print-A5T;
 }
-
+.print-A5x {
+    .w-left--calc {
+        width: calc(100% - 150px);
+    }
+}
+.print-A5xuatkho,
+.print-A4xuatkho {
+    @extend .print-A5x;
+}
+.print-A4x {
+    @extend .print-A5x;
+}
 .print-A4 {
     font-size: $font-size-base-print + 1  !important;
     padding: 5% 10% 5% 12%!important;
@@ -246,9 +278,20 @@ $value in $theme-colors {
         left: 0;
         width: 100%;
         height: auto;
+        page-break-before: auto;
+        page-break-after: auto;
         page-break-after: always !important;
         page-break-inside:avoid;
+        
         &.print-A5 {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            .print-body {
+                flex-grow: 1;
+            }
+        }
+        &.print-A4 {
             display: flex;
             flex-direction: column;
             min-height: 100%;
@@ -259,27 +302,7 @@ $value in $theme-colors {
 
 
     }
-
-    .print-A5T,
-    .print-A4T   {
-        .print-footer {
-            position: fixed !important;
-            bottom: 15px;
-            left: 0;
-            right: 0;
-        }
-      
-    }
-    .print-A4dv {
-        .print-footer {
-            position: fixed !important;
-            bottom: 15px;
-            left: 0;
-            right: 0;
-        }
-    }
-
-
+    
     .pay-money,
      .history-total,
         .print-footer
@@ -288,22 +311,22 @@ $value in $theme-colors {
         page-break-inside:avoid;
     }
 
-    table { 
-        page-break-after:auto;
-        thead { 
-            display:table-header-group; 
-        }
-        tr{
-            page-break-inside:avoid; 
-            page-break-after:auto;
-            td{ 
-                page-break-inside:avoid;
-                page-break-after:auto;
-            }
-        }
-        tfoot { 
-            display:table-footer-group; 
-        }
-    }
+    // table { 
+    //     page-break-after:auto;
+    //     thead { 
+    //         display:table-header-group; 
+    //     }
+    //     tr{
+    //         page-break-inside:avoid; 
+    //         page-break-after:auto;
+    //         td{ 
+    //             page-break-inside:avoid;
+    //             page-break-after:auto;
+    //         }
+    //     }
+    //     tfoot { 
+    //         display:table-footer-group; 
+    //     }
+    // }
 }
 

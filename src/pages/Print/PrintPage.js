@@ -5,18 +5,24 @@ import { PrintSizeK58 } from "./components/PrintSizeK58/PrintSizeK58";
 import { PrintSizeK58T } from "./components/PrintSizeK58/PrintSizeK58T";
 import { PrintSizeK58TTKH } from "./components/PrintSizeK58/PrintSizeK58TTKH";
 import { PrintSizeK58DV } from "./components/PrintSizeK58/PrintSizeK58DV";
+import { PrintSizeK58X } from "./components/PrintSizeK58/PrintSizeK58X";
+import { PrintSizeK58XuatKho } from "./components/PrintSizeK58/PrintSizeK58XuatKho";
 
 // import PrinSize k80
 import { PrintSizeK80 } from "./components/PrintSizeK80/PrintSizeK80";
 import { PrintSizeK80T } from "./components/PrintSizeK80/PrintSizeK80T";
 import { PrintSizeK80TTKH } from "./components/PrintSizeK80/PrintSizeK80TTKH";
 import { PrintSizeK80DV } from "./components/PrintSizeK80/PrintSizeK80DV";
+import { PrintSizeK80X } from "./components/PrintSizeK80/PrintSizeK80X";
+import { PrintSizeK80XuatKho } from "./components/PrintSizeK80/PrintSizeK80XuatKho";
 
 // import PrinSize A5
 import { PrintSizeA5 } from "./components/PrintSizeA5/PrintSizeA5";
 import { PrintSizeA5T } from "./components/PrintSizeA5/PrintSizeA5T";
 import { PrintSizeA5TTKH } from "./components/PrintSizeA5/PrintSizeA5TTKH";
 import { PrintSizeA5DV } from "./components/PrintSizeA5/PrintSizeA5DV";
+import { PrintSizeA5X } from "./components/PrintSizeA5/PrintSizeA5X";
+import { PrintSizeA5XuatKho } from "./components/PrintSizeA5/PrintSizeA5XuatKho";
 
 
 // import PrinSize A4
@@ -24,6 +30,8 @@ import { PrintSizeA4 } from "./components/PrintSizeA4/PrintSizeA4";
 import { PrintSizeA4T } from "./components/PrintSizeA4/PrintSizeA4T";
 import { PrintSizeA4TTKH } from "./components/PrintSizeA4/PrintSizeA4TTKH";
 import { PrintSizeA4DV } from "./components/PrintSizeA4/PrintSizeA4DV";
+import { PrintSizeA4X } from "./components/PrintSizeA4/PrintSizeA4X";
+import { PrintSizeA4XuatKho} from "./components/PrintSizeA4/PrintSizeA4XuatKho";
 
 function PrintPage(props) {
   // import PrinSize K58
@@ -31,24 +39,33 @@ function PrintPage(props) {
   const PrintSizeK58TRef = useRef();
   const PrintSizeK58TTKHRef = useRef();
   const PrintSizeK58DVRef = useRef();
+  const PrintSizeK58XRef = useRef();
+  const PrintSizeK58XuatKhoRef = useRef();
 
   // import PrinSize K80
   const PrintK80Ref = useRef();
   const PrintK80TRef = useRef();
   const PrintSizeK80TTKHRef = useRef();
   const PrintSizeK80DVRef = useRef();
+  const PrintSizeK80XRef = useRef();
+  const PrintSizeK80XuatKhoRef = useRef();
 
   // import PrinSize A5
   const PrintSizeA5Ref = useRef();
   const PrintSizeA5TRef = useRef();
   const PrintSizeA5TTKHRef = useRef();
   const PrintSizeA5DVRef = useRef();
+  const PrintSizeA5XRef = useRef();
+  const PrintSizeA5XuatKhoRef = useRef();
 
   // import PrinSize A4
   const PrintSizeA4Ref = useRef();
   const PrintSizeA4TRef = useRef();
   const PrintSizeA4TTKHRef = useRef ();
   const PrintSizeA4DVRef = useRef();
+  const PrintSizeA4XRef = useRef();
+  const PrintSizeA4XuatKhoRef = useRef();
+
 
   const PrintArr = [
     {
@@ -80,6 +97,20 @@ function PrintPage(props) {
       ButtonName: "Print K58 Phiếu làm dịch vụ",
     },
     {
+      Name: "Print Size K58 Phiếu yêu cầu xuất kho",
+      ComponentName: "<PrintSizeK58 />",
+      Component: <PrintSizeK58X ref={PrintSizeK58XRef} />,
+      Ref: PrintSizeK58XRef,
+      ButtonName: "Print K58 Phiếu yêu cầu xuất kho",
+    },
+    {
+      Name: "Print Size K58 Phiếu xuất kho",
+      ComponentName: "<PrintSizeK58 />",
+      Component: <PrintSizeK58XuatKho ref={PrintSizeK58XuatKhoRef} />,
+      Ref: PrintSizeK58XuatKhoRef,
+      ButtonName: "Print K58 Phiếu xuất kho",
+    },
+    {
       Name: "Print Size K80",
       ComponentName: "<PrintSizeK80 />",
       Component: <PrintSizeK80 ref={PrintK80Ref} />,
@@ -107,6 +138,21 @@ function PrintPage(props) {
       Component: <PrintSizeK80DV ref={PrintSizeK80DVRef} />,
       Ref: PrintSizeK80DVRef,
       ButtonName: "Print K80 Phiếu làm dịch vụ",
+    },
+    {
+      Name: "Print Size K80 Phiếu y/c xuất kho",
+      ComponentName: "<PrintSizeK80 />",
+      Component: <PrintSizeK80X ref={PrintSizeK80XRef} />,
+      Ref: PrintSizeK80XRef,
+      ButtonName: "Print K80 Phiếu y/c xuất kho",
+    },
+    
+    {
+      Name: "Print Size K80 Phiếu xuất kho",
+      ComponentName: "<PrintSizeK80 />",
+      Component: <PrintSizeK80XuatKho ref={PrintSizeK80XuatKhoRef} />,
+      Ref: PrintSizeK80XuatKhoRef,
+      ButtonName: "Print K80 Phiếu xuất kho",
     },
     {
       Name: "Print Size A5",
@@ -137,6 +183,20 @@ function PrintPage(props) {
       ButtonName: "Print A5 Phiếu làm dịch vụ",
     },
     {
+      Name: "Print Size A5 Phiếu y/c xuất kho",
+      ComponentName: "<PrintSizeA5 />",
+      Component: <PrintSizeA5X ref={PrintSizeA5XRef} />,
+      Ref: PrintSizeA5XRef,
+      ButtonName: "Print A5 Phiếu y/c xuất kho",
+    },
+    {
+      Name: "Print Size A5 Phiếu xuất kho",
+      ComponentName: "<PrintSizeA5 />",
+      Component: <PrintSizeA5XuatKho ref={PrintSizeA5XuatKhoRef} />,
+      Ref: PrintSizeA5XuatKhoRef,
+      ButtonName: "Print A5 Phiếu xuất kho",
+    },
+    {
       Name: "Print Size A4",
       ComponentName: "<PrintSizeA4 />",
       Component: <PrintSizeA4 ref={PrintSizeA4Ref} />,
@@ -163,6 +223,20 @@ function PrintPage(props) {
       Component: <PrintSizeA4DV ref={PrintSizeA4DVRef} />,
       Ref: PrintSizeA4DVRef,
       ButtonName: "Print A4 Phiếu làm dịch vụ",
+    },
+    {
+      Name: "Print Size A4 Phiếu y/c xuất kho",
+      ComponentName: "<PrintSizeA4 />",
+      Component: <PrintSizeA4X ref={PrintSizeA4XRef} />,
+      Ref: PrintSizeA4XRef,
+      ButtonName: "Print A4 Phiếu y/c xuất kho",
+    },
+    {
+      Name: "Print Size A4 Phiếu xuất kho",
+      ComponentName: "<PrintSizeA4 />",
+      Component: <PrintSizeA4XuatKho ref={PrintSizeA4XuatKhoRef} />,
+      Ref: PrintSizeA4XuatKhoRef,
+      ButtonName: "Print A4 Phiếu xuất kho",
     },
   ];
 
