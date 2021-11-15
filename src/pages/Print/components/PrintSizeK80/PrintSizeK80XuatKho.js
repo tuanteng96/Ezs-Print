@@ -17,7 +17,7 @@ export const PrintSizeK80XuatKho = React.forwardRef((props, ref) =>{
         </div>
         <div className="print-hottline text-center print-size-sm ">Hotline : 0981.883.338</div>
         <h1 className="print-receipt text-center text-uppercase print-size-lg font-weight-800 mb-0 pt-4">
-          PHIẾU YÊU CẦU XUẤT KHO
+          PHIẾU XUẤT KHO
         </h1>
       </div>
       <div className="body-print text-center">
@@ -68,7 +68,10 @@ export const PrintSizeK80XuatKho = React.forwardRef((props, ref) =>{
                   <td className="text-left  font-weight-800 print-size-md vertical-align-middle">
                   Kem dưỡng da chống lão hóa, khôi phục tế bào chết
                   </td>
-                  <td className="font-weight-bold vertical-align-middle">Hộp</td>
+                  <td className="font-weight-bold vertical-align-middle">
+                    <p className="mb-0">30</p>
+                    <p className="mb-0">Hộp</p>
+                  </td>
                   <td className="font-weight-bold vertical-align-middle">1.00.0000</td>
                 </tr>
             ))}

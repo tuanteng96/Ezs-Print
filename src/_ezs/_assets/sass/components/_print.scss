@@ -274,14 +274,15 @@ $value in $theme-colors {
 
     .print-ezs {
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 0;
         width: 100%;
         height: auto;
+        margin-bottom: 20mm;
+        padding: 0 2px;
         page-break-before: auto;
         page-break-after: auto;
-        page-break-after: always !important;
-        page-break-inside:avoid;
+        page-break-inside: auto;
         
         &.print-A5 {
             display: flex;
@@ -300,7 +301,6 @@ $value in $theme-colors {
             }
         }
 
-
     }
     
     .pay-money,
@@ -311,22 +311,18 @@ $value in $theme-colors {
         page-break-inside:avoid;
     }
 
-    // table { 
-    //     page-break-after:auto;
-    //     thead { 
-    //         display:table-header-group; 
-    //     }
-    //     tr{
-    //         page-break-inside:avoid; 
-    //         page-break-after:auto;
-    //         td{ 
-    //             page-break-inside:avoid;
-    //             page-break-after:auto;
-    //         }
-    //     }
-    //     tfoot { 
-    //         display:table-footer-group; 
-    //     }
-    // }
+    table {
+        page-break-inside: auto;
+    }
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tfoot {
+        display: table-footer-group;
+    }
 }
 
